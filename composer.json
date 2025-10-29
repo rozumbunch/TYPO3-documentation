@@ -1,0 +1,25 @@
+{
+    "name": "rozumbunch/documentationhub",
+    "type": "typo3-cms-extension",
+    "description": "Backend documentation module with markdown and PDF export",
+    "keywords": ["typo3","documentation","markdown","pdf"],
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "require": {
+        "php": ">=8.2",
+        "typo3/cms-core": "^12.4 || ^13.0",
+        "mpdf/mpdf": "^8.2",
+        "league/commonmark": "^2.4"
+      },
+    "autoload": {
+        "psr-4": {
+            "Rozumbunch\\Documentationhub\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "documentationhub"
+        }
+    }
+}

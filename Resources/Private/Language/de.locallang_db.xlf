@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="EXT:documentationhub/Resources/Private/Language/locallang_db.xlf" date="2024-01-01T00:00:00Z" product-name="documentationhub">
+        <header/>
+        <body>
+            <trans-unit id="be_groups.documentation_sources">
+                <source>Documentation Sources</source>
+                <target>Dokumentationsquellen</target>
+            </trans-unit>
+            <trans-unit id="be_groups.tab.documentation">
+                <source>Documentation</source>
+                <target>Dokumentation</target>
+            </trans-unit>
+            <trans-unit id="be_groups.documentation_sources.description">
+                <source>Select which documentation sources this group should have access to.</source>
+                <target>Wählen Sie aus, auf welche Dokumentationsquellen diese Gruppe Zugriff haben soll.</target>
+            </trans-unit>
+            <trans-unit id="documentation.title">
+                <source>Extension manual</source>
+                <target>Anleitung für die Documentation Extension</target>
+            </trans-unit>
+            <trans-unit id="documentation.description">
+                <source>Extension manual for Extension 'Documentation'</source>
+                <target>Anleitung für die Documentation Extension</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

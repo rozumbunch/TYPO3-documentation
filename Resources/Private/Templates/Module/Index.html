@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{f:translate(key: 'documentation.navigation.title', extensionName: 'documentationhub')}</title>
+    <link rel="stylesheet" href="{f:uri.resource(path: 'Css/documentation.css', extensionName: 'documentationhub')}" />
+    <script src="{f:uri.resource(path: 'JavaScript/translations.js', extensionName: 'documentationhub')}"></script>
+    <script src="{f:uri.resource(path: 'JavaScript/documentation.js', extensionName: 'documentationhub')}"></script>  
+</head>
+<body>
+    <div class="rb-doc">
+        <nav class="rb-doc__sidebar" id="main-navigation">
+            <div class="rb-doc__sidebar-header">
+                <h3 class="rb-doc__sidebar-title">{f:translate(key: 'documentation.navigation.title', extensionName: 'documentationhub')}</h3>
+                <button class="rb-doc__nav-toggle-main" id="nav-toggle-main" type="button" title="Navigation ein-/ausblenden">
+                    <svg class="nav-toggle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                        <g fill="currentColor">
+                            <path d="M9 12v2H7v-2h2m.5-1h-3c-.3 0-.5.2-.5.5v3c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5v-3c0-.3-.2-.5-.5-.5zM9 7v2H7V7h2m.5-1h-3c-.3 0-.5.2-.5.5v3c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5v-3c0-.3-.2-.5-.5-.5zM9 2v2H7V2h2m.5-1h-3c-.3 0-.5.2-.5.5v3c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5v-3c0-.3-.2-.5-.5-.5zM4 7v2H2V7h2m.5-1h-3c-.3 0-.5.2-.5.5v3c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5v-3c0-.3-.2-.5-.5-.5zM4 2v2H2V2h2m.5-1h-3c-.3 0-.5.2-.5.5v3c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5v-3c0-.3-.2-.5-.5-.5zM4 12v2H2v-2h2m.5-1h-3c-.3 0-.5.2-.5.5v3c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5v-3c0-.3-.2-.5-.5-.5zM14 7v2h-2V7h2m.5-1h-3c-.3 0-.5.2-.5.5v3c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5v-3c0-.3-.2-.5-.5-.5zM14 2v2h-2V2h2m.5-1h-3c-.3 0-.5.2-.5.5v3c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5v-3c0-.3-.2-.5-.5-.5zM14 12v2h-2v-2h2m.5-1h-3c-.3 0-.5.2-.5.5v3c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5v-3c0-.3-.2-.5-.5-.5z"></path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+            <ul class="rb-doc__nav">              
+                <f:for each="{navigation}" as="sourceGroup">
+                    <li class="rb-doc__nav-item level-1" data-source="{sourceGroup.source}">
+                        <div class="rb-doc__nav-source">
+                            <a href="#" 
+                               class="rb-doc__nav-link level-1 {f:if(condition: '{sourceGroup.path} == {currentPath}', then: 'active')}"
+                               data-path="{sourceGroup.path}"
+                               style="border-left-color: {sourceGroup.color}">
+                                <span class="rb-doc__nav-icon">{sourceGroup.icon}</span>
+                                {sourceGroup.title}
+                                <f:if condition="{sourceGroup.pages}">
+                                    <button class="rb-doc__nav-toggle" data-target="pages-{sourceGroup.source}" type="button">
+                                        <span class="toggle-icon">+</span>
+                                    </button>
+                                </f:if>
+                            </a>
+                        </div>
+                        
+                        <f:if condition="{sourceGroup.pages}">
+                            <ul class="rb-doc__nav-pages" id="pages-{sourceGroup.source}">
+                                <f:for each="{sourceGroup.pages}" as="page">
+                                    <li class="rb-doc__nav-item level-{page.level}" data-source="{page.source}">
+                                    
+                                        <f:if condition="{page.level} == 1">
+                                            <a href="#" 
+                                               class="rb-doc__nav-link level-1 {f:if(condition: '{page.path} == {currentPath}', then: 'active')}"
+                                               data-path="{page.path}">
+                                                <span class="rb-doc__nav-icon">{page.icon}</span>
+                                                {page.title}
+                                                <f:if condition="{page.pages}">
+                                                    <button class="rb-doc__nav-toggle" data-target="subpages-{page.source}-{page.title}" type="button">
+                                                        <span class="toggle-icon">+</span>
+                                                    </button>
+                                                </f:if>
+                                            </a>
+                                            
+                                            <f:if condition="{page.pages}">
+                                                <ul class="rb-doc__nav-subpages" id="subpages-{page.source}-{page.title}">
+                                                    <f:for each="{page.pages}" as="subpage">
+                                                        <li class="rb-doc__nav-item level-2">
+                                                            <a href="#" 
+                                                               class="rb-doc__nav-link level-2 {f:if(condition: '{subpage.path} == {currentPath}', then: 'active')}"
+                                                               data-path="{subpage.path}">
+                                                                <span class="rb-doc__nav-icon">{subpage.icon}</span>
+                                                                {subpage.title}
+                                                            </a>
+                                                        </li>
+                                                    </f:for>
+                                                </ul>
+                                            </f:if>
+                                        </f:if>
+                                        
+                                        <f:if condition="{page.level} == 2">
+                                            <a href="#" 
+                                               class="rb-doc__nav-link level-2 {f:if(condition: '{page.path} == {currentPath}', then: 'active')}"
+                                               data-path="{page.path}">
+                                                <span class="rb-doc__nav-icon">{page.icon}</span>
+                                                {page.title}
+                                            </a>
+                                        </f:if>
+                                    </li>
+                                </f:for>
+                            </ul>
+                        </f:if>
+                    </li>
+                </f:for>
+            </ul>
+            
+            <div class="rb-doc__powered-by">
+                <a href="https://www.rozumbunch.com" target="_blank" rel="noopener" title="Rozumbunch - TYPO3 Development">
+                    Powered by Rozumbunch
+                </a>
+            </div>
+        </nav>
+        
+        <main class="rb-doc__content">
+            <div class="rb-doc__content-header">
+                <div class="rb-doc__pdf-export-buttons" style="display: none;">
+                    <button id="export-page-pdf" class="rb-doc__pdf-btn rb-doc__pdf-btn--page" data-path="{currentPath}" title="Aktuelle Seite als PDF herunterladen">
+                        <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                        </svg>
+                    </button>
+                    <button id="export-source-pdf" class="rb-doc__pdf-btn rb-doc__pdf-btn--source" data-source="{currentPath}" title="Aktuelles Kapitel als PDF herunterladen">
+                        <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20">
+                            <path fill="#FFF" d="M1 1h14v14H1V1z"/>
+                            <path fill="#999" d="M1 1v14h14V1H1zm1 1h12v12H2V2z"/>
+                            <path fill="#fb4a66" d="M13 8v5H5V7h4l1 1h3z"/>
+                            <path fill="#e63e5a" d="M13 9H9l-1 1H5V8h8v1z"/>
+                            <path fill="#fb4a66" d="M3 3h1v1H3zM3 5h1v1H3z"/>
+                            <path fill="#B9B9B9" d="M5 3h8v1H5zM5 5h8v1H5z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <article class="rb-doc__article" id="rb-doc-content">
+                <f:format.raw>{htmlContent}</f:format.raw>
+            </article>
+        </main>
+    </div>
+
+</body>
+</html>

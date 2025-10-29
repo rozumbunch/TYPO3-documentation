@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="EXT:documentationhub/Resources/Private/Language/locallang.xlf" date="2024-01-01T00:00:00Z" product-name="documentationhub">
+        <header/>
+        <body>
+            <trans-unit id="documentation.title">
+                <source>Documentation</source>
+                <target>Anleitung für die Extension - Documentation</target>
+            </trans-unit>
+            <trans-unit id="documentation.description">
+                <source>Documentation for the Documentation Extension</source>
+                <target>Dokumentation für die Documentation Extension</target>
+            </trans-unit>
+            <trans-unit id="documentation.navigation.title">
+                <source>Documentation</source>
+                <target>Projektdokumentation</target>
+            </trans-unit>
+            <trans-unit id="error.noDocumentationFound.title">
+                <source>No Documentation Found</source>
+                <target>Keine Dokumentation gefunden</target>
+            </trans-unit>
+            <trans-unit id="error.noDocumentationFound.message">
+                <source>No index.md was found in the configured documentation sources.</source>
+                <target>Es wurde keine index.md in den konfigurierten Dokumentationsquellen gefunden.</target>
+            </trans-unit>
+            <trans-unit id="error.pageNotFound.title">
+                <source>Page Not Found</source>
+                <target>Seite nicht gefunden</target>
+            </trans-unit>
+            <trans-unit id="error.pageNotFound.message">
+                <source>The requested page could not be found.</source>
+                <target>Die angeforderte Seite konnte nicht gefunden werden.</target>
+            </trans-unit>
+            <trans-unit id="default.unknown">
+                <source>Unknown</source>
+                <target>Unbekannt</target>
+            </trans-unit>
+            <trans-unit id="error.noPathSpecified">
+                <source>No path specified</source>
+                <target>Kein Pfad angegeben</target>
+            </trans-unit>
+            <trans-unit id="error.loadingPage">
+                <source>Error loading page: </source>
+                <target>Fehler beim Laden der Seite: </target>
+            </trans-unit>
+            <trans-unit id="pdf.exportError.title">
+                <source>PDF Export Error</source>
+                <target>PDF Export Fehler</target>
+            </trans-unit>
+            <trans-unit id="pdf.exportError.label">
+                <source>Error:</source>
+                <target>Fehler:</target>
+            </trans-unit>
+            <trans-unit id="markdown.noContent">
+                <source>No content available.</source>
+                <target>Kein Inhalt verfügbar.</target>
+            </trans-unit>
+            <trans-unit id="markdown.fileNotFound.title">
+                <source>File Not Found</source>
+                <target>Datei nicht gefunden</target>
+            </trans-unit>
+            <trans-unit id="markdown.fileNotFound.message">
+                <source>The requested documentation file could not be found.</source>
+                <target>Die angeforderte Dokumentationsdatei konnte nicht gefunden werden.</target>
+            </trans-unit>
+            <trans-unit id="markdown.readError.title">
+                <source>Read Error</source>
+                <target>Fehler beim Lesen</target>
+            </trans-unit>
+            <trans-unit id="markdown.readError.message">
+                <source>The file could not be read.</source>
+                <target>Die Datei konnte nicht gelesen werden.</target>
+            </trans-unit>
+            <trans-unit id="js.contentLoadError">
+                <source>Content could not be loaded.</source>
+                <target>Inhalt konnte nicht geladen werden.</target>
+            </trans-unit>
+            <trans-unit id="js.contentLoadErrorGeneral">
+                <source>Error loading content.</source>
+                <target>Fehler beim Laden des Inhalts.</target>
+            </trans-unit>
+            <trans-unit id="js.loadingContent">
+                <source>Loading content...</source>
+                <target>Lade Inhalt...</target>
+            </trans-unit>
+            <trans-unit id="js.navigationHide">
+                <source>Hide navigation</source>
+                <target>Navigation ausblenden</target>
+            </trans-unit>
+            <trans-unit id="js.navigationShow">
+                <source>Show navigation</source>
+                <target>Navigation einblenden</target>
+            </trans-unit>
+            <trans-unit id="js.pdfCreationError">
+                <source>PDF could not be created (Status: {0})</source>
+                <target>PDF konnte nicht erstellt werden (Status: {0})</target>
+            </trans-unit>
+            <trans-unit id="js.invalidPdfReceived">
+                <source>Invalid PDF file received</source>
+                <target>Ungültige PDF-Datei erhalten</target>
+            </trans-unit>
+            <trans-unit id="js.pdfDownloadError">
+                <source>Error creating PDF: {0}</source>
+                <target>Fehler beim Erstellen des PDFs: {0}</target>
+            </trans-unit>
+            <trans-unit id="js.chapterPdfDownloadError">
+                <source>Error creating chapter PDF: {0}</source>
+                <target>Fehler beim Erstellen des Kapitel-PDFs: {0}</target>
+            </trans-unit>
+            <trans-unit id="js.noDataPathFound">
+                <source>No data-path attribute found</source>
+                <target>Kein data-path Attribut gefunden</target>
+            </trans-unit>
+            <trans-unit id="js.noDataSourceFound">
+                <source>No data-source attribute found</source>
+                <target>Kein data-source Attribut gefunden</target>
+            </trans-unit>
+            <trans-unit id="js.toggleStatesRestoreError">
+                <source>Toggle states could not be restored:</source>
+                <target>Toggle-Zustände konnten nicht wiederhergestellt werden:</target>
+            </trans-unit>
+            <trans-unit id="js.pdfButtonsDisplayed">
+                <source>PDF buttons displayed for path:</source>
+                <target>PDF-Buttons angezeigt für Pfad:</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
