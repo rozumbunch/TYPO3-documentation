@@ -17,4 +17,4 @@ services:
 
   Rozumbunch\Documentationhub\Service\PdfExportService:
     arguments:
-      $documentationService: '@Rozumbunch\Documentationhub\Service\DocumentationhubService'
+      $documentationhubService: '@Rozumbunch\Documentationhub\Service\DocumentationhubService'
