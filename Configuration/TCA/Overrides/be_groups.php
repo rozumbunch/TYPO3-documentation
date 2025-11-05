@@ -15,7 +15,7 @@ ExtensionManagementUtility::addTCAcolumns('be_groups', [
             'renderType' => 'selectMultipleSideBySide',
             'enableMultiSelectFilterTextfield' => true,
             'items' => [], 
-            'itemsProcFunc' => \Rozumbunch\DocumentationHub\TCA\ItemsProcFunc\DocumentationSourcesItemsProcFunc::class . '->getDocumentationSources',
+            'itemsProcFunc' => \Rozumbunch\Documentationhub\TCA\ItemsProcFunc\DocumentationSourcesItemsProcFunc::class . '->getDocumentationSources',
             'size' => 8,
             'minitems' => 0,
             'maxitems' => 999,
